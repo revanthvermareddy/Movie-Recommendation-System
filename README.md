@@ -6,6 +6,7 @@
 * [Approach](#approach)
 * [Steps](#steps)
 * [Regularization](#regularization)
+* [Rmse](#rmse)
 * [Why vectors to hold data?](#why-vectors-to-hold-data)
 * [Technologies](#technologies)
 * [Setup](#setup)
@@ -37,7 +38,10 @@ Though this seems to be straight forward, we should note that we directly cannot
 We use low_rank_matrix_factorization approach for this and is available as a utility in matrix_factorization_utilities.py file
 
 ## Regularization
-A control in the model that limits how much weight to place on one single attribute when modeling users and products. The higher the regularization amount, the less weight we can put on any single attribute. For larger dataset use larg value(1.0, 10.0, etc) and for smaller dataset use small value(0.1, etc). Finding the right value takes experimentation.
+A control in the model that limits how much weight to place on one single attribute when modeling users and products. The higher the regularization amount, the less weight we can put on any single attribute. For larger dataset use larg value(1.0, 10.0, etc) and for smaller dataset use small value(0.1, etc). Finding the right value takes experimentation
+
+## RMSE
+RMSE (Root-Mean-Square Error) is a measurement of the difference between the user's real rating and the rating we predicted. The lower the RMSE, the more accurate the model is.
 
 ## Why vectors to hold data?
 To support CPU's single instruction multiple data (SIMD) operations
