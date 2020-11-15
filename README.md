@@ -35,6 +35,9 @@ Though this seems to be straight forward, we should note that we directly cannot
 
 We use low_rank_matrix_factorization approach for this and is available as a utility in matrix_factorization_utilities.py file
 
+## Regularization
+A control in the model that limits how much weight to place on one single attribute when modeling users and products. The higher the regularization amount, the less weight we can put on any single attribute
+
 ## Why vectors to hold data?
 To support CPU's single instruction multiple data (SIMD) operations
 	
