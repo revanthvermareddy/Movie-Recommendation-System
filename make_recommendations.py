@@ -24,7 +24,7 @@ predicted_ratings = np.matmul(U, M)
 print("\nEnter a user_id to get recommendations (Between 1 and 100):")
 user_id_to_search = int(input())
 
-print("\nMovies previously reviewed by user_id {} : ".format(user_id_to_search))
+print("\n\nMovies previously reviewed by user_id {} : ".format(user_id_to_search))
 
 reviewed_movies_df = raw_dataset_df[raw_dataset_df['user_id'] == user_id_to_search]
 reviewed_movies_df = reviewed_movies_df.join(movies_df, on='movie_id')
@@ -33,7 +33,7 @@ print(reviewed_movies_df[['title', 'genre', 'value']])
 
 input("\nPress enter to continue.. ")
 
-print("\nMovies we will recommend: ")
+print("\n\nMovies we will recommend: ")
 
 user_ratings = predicted_ratings[user_id_to_search - 1]
 movies_df['rating'] = user_ratings
