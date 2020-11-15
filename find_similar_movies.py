@@ -20,7 +20,8 @@ U, M = matrix_factorization_utilities.low_rank_matrix_factorization(ratings_df.t
 M = np.transpose(M)
 
 # Choose a movie to find similar movies to. Let's find movies similar to movie #5:
-movie_id = int(input("\nEnter the movie id to find its similar movies: "))
+print("Enter a movie_id to get similar recommendations :")
+movie_id = int(input())
 
 # Get movie #1's name and genre
 movie_information = movies_df.loc[5]
