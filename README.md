@@ -3,7 +3,7 @@
 * [Recommendation System](#recommendation-system)
 * [Types](#types)
 * [Assumptions](#assumptions)
-* [Why vectors to hold data?](#why-vectors-to-hold-data?)
+* [Why vectors to hold data?](#why-vectors-to-hold-data)
 * [Technologies](#technologies)
 * [Setup](#setup)
 
@@ -25,7 +25,7 @@ We use the already available sparse matrix of RATINGS (= USERS x MOVIES) and the
 
 Though this seems to be straight forward, we should note that we directly cannot use sparse matrix as most of the data points are missing. Hence we'll instead use iterative approach where in we first pick random values for both USERS, MOVIES matrices and then try to modify those values to match the results with those of the available values in sparse matrix.
 
-### Steps
+## Steps
 1. Set all elements in USERS and MOVIES to random numbers. Right now USERS x MOVIES will result in random numbers.
 2. Create a "Cost function" that checks how far off USERS x MOVIES currently is from equaling the known values of the RATINGS matrix.
 3. Using a numerical optimization algorithm, tweak the numbers in USERS and MOVIES a little at a time. The goal is to get the ost function a little closer to zero. We'll use SciPy's 'fmin_cg()' optimization function to find the minimum cost.
