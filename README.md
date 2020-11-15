@@ -20,6 +20,9 @@ A computer program that helps user discover products or content by predecting th
 ## Assumptions
 Though each and every user is unique and would give a different rating than what we expect. Here we go with the tacit assumption that user ratings are a reflection of how much a movie appeal's to that user's unique set of interests
 
+## Approach
+We use the already available sparse matrix of RATINGS (USERS x MOVIES) and then reverse factrorize it to get USERS and MOVIES matrices so that they best fit the already available ratings. We then multiply the obtained USERS and MOVIES matrices to get the unknown ratings of a movie, finally recommend movies in the order of most highly rateable for each user
+
 ## Why vectors to hold data?
 To support CPU's single instruction multiple data (SIMD) operations
 	
