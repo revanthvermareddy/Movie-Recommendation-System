@@ -5,6 +5,7 @@
 * [Assumptions](#assumptions)
 * [Approach](#approach)
 * [Steps](#steps)
+* [Regularization](#regularization)
 * [Why vectors to hold data?](#why-vectors-to-hold-data)
 * [Technologies](#technologies)
 * [Setup](#setup)
