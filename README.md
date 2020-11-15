@@ -21,7 +21,17 @@ A computer program that helps user discover products or content by predecting th
 Though each and every user is unique and would give a different rating than what we expect. Here we go with the tacit assumption that user ratings are a reflection of how much a movie appeal's to that user's unique set of interests
 
 ## Approach
-We use the already available sparse matrix of RATINGS (USERS x MOVIES) and then reverse factrorize it to get USERS and MOVIES matrices so that they best fit the already available ratings. We then multiply the obtained USERS and MOVIES matrices to get the unknown ratings of a movie, finally recommend movies in the order of most highly rateable for each user
+We use the already available sparse matrix of RATINGS (USERS x MOVIES) and then reverse factrorize it to get USERS and MOVIES matrices so that they best fit the already available ratings. We then multiply the obtained USERS and MOVIES matrices to get the unknown ratings of a movie, finally recommend movies in the order of most highly rateable for each user.
+
+Though this seems to be straight forward, we should note that we directly cannot use sparse matrix as most of the data points are missing. Hence we'll instead use iterative approach where in we first pick random values for both USERS, MOVIES matrices and then try to modify those values to match the results with those of the available values in sparse matrix.
+
+### Steps
+1. Set all elements in USERS and MOVIES to random numbers. Right now USERS x MOVIES will result in random numbers.
+2. Create a "Cost function" that checks how far off USERS x MOVIES currently is from equaling the known values of the RATINGS matrix.
+3. Using a numerical optimization algorithm, tweak the numbers in USERS and MOVIES a little at a time. The goal is to get the ost function a little closer to zero. We'll use SciPy's 'fmin_cg()' optimization function to find the minimum cost.
+4. Repeat step 3 until we cannot reduce the cost function further. The USERS and MOVIES matrix values we find will be estimates. [USERS x MOVIES ~ RATINGS]
+
+We use low_rank_matrix_factorization approach for this and is available as a utility in matrix_factorization_utilities.py file
 
 ## Why vectors to hold data?
 To support CPU's single instruction multiple data (SIMD) operations
