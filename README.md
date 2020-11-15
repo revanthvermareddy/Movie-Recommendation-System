@@ -2,6 +2,8 @@
 * [General info](#general-info)
 * [Recommendation System](#recommendation-system)
 * [Types](#types)
+* [Assumptions](#assumptions)
+* [Why vectors to hold data?](#why-vectors-to-hold-data?)
 * [Technologies](#technologies)
 * [Setup](#setup)
 
@@ -14,6 +16,9 @@ A computer program that helps user discover products or content by predecting th
 ## Types
 1. Content-based recommendation systems - uses knowlwdge about each product to recommend new products (works even when the product has no user reviews)
 2. Collaborative-filtering recommendation systems - making recommendations only based on how users rated products in the past (doesn't require any knowledge about the products themselves but need the user reviews already available)
+
+## Assumptions
+Though each and every user is unique and would give a different rating than what we expect. Here we go with the tacit assumption that user ratings are a reflection of how much a movie appeal's to that user's unique set of interests
 
 ## Why vectors to hold data?
 To support CPU's single instruction multiple data (SIMD) operations
@@ -28,5 +33,5 @@ To run this project, install it locally using pip:
 ```
 $ cd ../Movie_Recommendation_System
 $ pip install -r requirements.txt
-$ python recommend.py
+$ python recommender.py
 ```
