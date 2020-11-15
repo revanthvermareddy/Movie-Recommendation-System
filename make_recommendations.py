@@ -3,10 +3,10 @@ import pandas as pd
 import matrix_factorization_utilities
 
 # Load user ratings
-raw_dataset_df = pd.read_csv('movie_ratings_data_set.csv')
+raw_dataset_df = pd.read_csv('./data/csv/movie_ratings_data_set.csv')
 
 # Load movie titles
-movies_df = pd.read_csv('movies.csv', index_col='movie_id')
+movies_df = pd.read_csv('./data/csv/movies.csv', index_col='movie_id')
 
 # Convert the running list of user ratings into a matrix
 ratings_df = pd.pivot_table(raw_dataset_df, index='user_id',
