@@ -1,6 +1,7 @@
 ## Table of contents
 * [General info](#general-info)
 * [Recommendation System](#recommendation-system)
+* [Types](#types)
 * [Technologies](#technologies)
 * [Setup](#setup)
 
@@ -13,6 +14,9 @@ A computer program that helps user discover products or content by predecting th
 ## Types
 1. Content-based recommendation systems - uses knowlwdge about each product to recommend new products (works even when the product has no user reviews)
 2. Collaborative-filtering recommendation systems - making recommendations only based on how users rated products in the past (doesn't require any knowledge about the products themselves but need the user reviews already available)
+
+## Why vectors to hold data?
+To support CPU's single instruction multiple data (SIMD) operations
 	
 ## Technologies
 Project is created with:
