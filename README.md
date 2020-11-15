@@ -3,6 +3,8 @@
 * [Recommendation System](#recommendation-system)
 * [Types](#types)
 * [Assumptions](#assumptions)
+* [Approach](#approach)
+* [Steps](#steps)
 * [Why vectors to hold data?](#why-vectors-to-hold-data)
 * [Technologies](#technologies)
 * [Setup](#setup)
@@ -46,5 +48,5 @@ To run this project, install it locally using pip:
 ```
 $ cd ../Movie_Recommendation_System
 $ pip install -r requirements.txt
-$ python recommender.py
+$ python make_recommendations.py
 ```
