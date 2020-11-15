@@ -9,6 +9,10 @@ This project is a movie recommendation system which uses machine learning to rec
 
 ## Recommendation System
 A computer program that helps user discover products or content by predecting the user's rating of each item and then showing them the items they would rate highly
+
+## Types
+1. Content-based recommendation systems - uses knowlwdge about each product to recommend new products (works even when the product has no user reviews)
+2. Collaborative-filtering recommendation systems - making recommendations only based on how users rated products in the past (doesn't require any knowledge about the products themselves but need the user reviews already available)
 	
 ## Technologies
 Project is created with:
